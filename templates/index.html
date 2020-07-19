@@ -1,0 +1,12 @@
+{%extends 'base.html' %}
+
+{% block head %}
+<title>Play Hangman</title>
+{% endblock %}
+
+{% block body %}
+<div class="home_body">
+    <h1><a href='{{ url_for("start_new_game") }}'> Start New Game</a></h1>
+    <h1><a href='{{ url_for("play_game") }}'> Resume Game</a></h1>
+</div>
+{% endblock %}

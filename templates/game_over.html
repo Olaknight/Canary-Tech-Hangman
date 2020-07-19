@@ -1,0 +1,22 @@
+{%extends 'base.html' %}
+
+{% block head %}
+<title>Your ratings</title>
+{% endblock %}
+
+{% block body %}
+<div class="main-info">
+    <img src="{{ url_for('static', filename='images/gameover_goof.jpg') }}", alt="quirky">
+    <h1>Oops! You banged!!</h1>
+    <h2>Our man got hanged!!</h2>
+    <br/>
+    <h3>The word you were looking for is: {{ game['answer'] }}</h3>
+</div>
+<div class="summary-container">
+    <h2 class="underlined">Game summary: </h2>
+    <h3>Levels solved: {{ game['level'] }}</h3>
+    <h3>Total score: {{ game['total_scores'] }} </h3>
+    <br/>
+    <h2>You will probably perform better if you play <a href='{{ url_for("play_game") }}'> another round </a> </h2>
+</div>
+{% endblock %}

@@ -1,0 +1,39 @@
+{%extends 'base.html' %}
+
+{% block head %}
+<title>Play Hangman</title>
+{% endblock %}
+
+{% block body %}
+
+<div class="game_info">
+    <h3> Total Points: {{ game['total_scores'] }} </h3>
+    <h3> Lives: {{ game['lives'] }} </h3>
+    <h3> Words so far: {{ game['level'] }} </h3>
+</div>
+<div class="game">
+    <div class="game_play">
+        {% for ch in game['entry']%}
+            <h3> {{ch}} </h3>
+        {% endfor %}
+        <form action="{{ url_for('play_game') }}" method="POST">
+            <input type="text" name="character" id="character" placeholder="Enter character" maxlength="1" minlength="1" required>
+            <input type="submit" value="Submit">
+                {% with messages = get_flashed_messages() %}
+                    {% if messages and not game['is_new_game']%}
+                        {% for message in messages %}
+                            <h2 class="flash"> {{ message }} </h2>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+        </form>
+    </div>
+    <div class="hint">
+        <button class="button" >Show hint</button>
+        <div class="hide">
+            <h4> {{ game['hint'] }} </h4>
+            <h4> {{ game['answer'] }} </h4>
+        </div>
+    </div>
+</div>
+{% endblock %}

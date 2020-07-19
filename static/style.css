@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "PT Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  font-style: none;
+  color: #ecd587;
+  text-decoration: none;  
+}
+
+.container {
+  padding: 0 100px 0 100px;
+  color: #EAE7C6;
+}
+
+body, html {
+    background: #181818;
+    color: #EDF5E1;
+    height:100%;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px 0;
+  background: #252627;
+  margin-bottom: 4%;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.navbar {
+  background-color: #252627;
+}
+
+.logo {
+  color: #EAE7C6;
+  text-transform: capitalize;
+  text-decoration: solid;
+  font-style: italic;
+  font-size: 1.4rem;
+}
+.home_body {
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('/static/images/hangman.jpg');
+}
+
+.home_body h1 {
+  border: 1px solid #bbb8b8;
+  width: 20%;
+  height: 10%;
+  padding: 1%;
+  border-radius: 10%;
+  background-color: #252627;
+  margin: auto;
+  margin-top: 15%;
+  text-align: center;
+}
+
+img {
+  width: 60%;
+  height: 30%;
+  margin: 2%;
+}
+
+.main-info {
+  margin: auto;
+  margin-bottom: 3%;
+  width: 60%;
+  border: 1px outset #abafa6c2;
+  border-radius: 10px;
+  padding: 3%;
+  text-align: center;
+}
+
+.summary-container {
+  margin-left: 20%;
+  border-right: #dcdcdc;
+}
+
+.button-container {
+  margin: auto;
+  position: absolute;
+}
+
+.button {
+  box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+	background-color:#bbb8b8;
+	border-radius:8px;
+	border:1px solid #e6d9d9;
+	cursor:pointer;
+	color:#272626a8;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:10px 24px;
+	text-decoration:none;
+  text-shadow:0px 1px 0px #ffffff;
+}
+
+.button:hover + .hide{
+  display: block;
+}
+
+.button:hover {
+  background:linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+	background-color:#dfdfdf;
+}
+
+.button:active {
+  position: relative;
+  top: 1px;
+}
+
+@keyframes flashing {
+  from {color: #181818;}
+  to {color: #ecd587;}
+  
+}
+
+.flash_container {
+  margin: auto;
+}
+
+.flash {
+  color:  #181818;
+  animation-name: flashing;
+  animation-duration: 0.5s;
+  text-align: centre;
+  display: inline;
+  size: 0.3rem;
+  font-style: oblique;
+}
+
+.game_info {
+  width: 15%;
+  margin-bottom: 3%;
+  border: 1px outset #abafa6c2;
+  border-radius: 10px;
+  padding: 1%;
+  text-align: center;
+  margin-left: 78.5%;
+  font-size: 1.3rem;
+  line-height: 2.0rem;;
+}
+
+.hint {
+  margin-left: 25%;
+  margin-top: 2%;
+  position: inherit;
+  display: block;
+}
+
+.hide {
+  display: none;
+  width: auto;
+  border: 1px outset;
+  padding: 1%;
+  word-spacing: none;
+  position: fixed;
+  font: 1rem;
+}
+
+.game_play {
+  margin: auto;
+  border: 1px outset #fff;
+  border-radius: 10px;
+  padding: 1%;
+  width: 50%;
+  text-align: center;
+}
+.game_play h2 {
+  position: fixed;
+}
+
+.game_play h3 {
+  padding: 20px;
+  text-align: center;
+  background-color: #ecd587;
+  margin: 0.1rem;
+  margin-top: 1rem;
+  display: inline-block;
+  color: #181818;
+  font-style: oblique;
+  text-transform: capitalize;
+  border: 0.1 px outset rgba(248, 247, 247, 0.808)(255, 255, 255, 0.726);;
+}
+
+form {
+  margin: auto;
+  margin-top: 7%;
+  width: 30%;
+  height: 100%;
+}
+
+#character {
+  margin: auto;
+  width: 45%;
+  border: 1px solid #dfdfdf;
+  height: 30px;
+  border-radius: 5%;
+}
+
+footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  background-color: #252627;
+}
+
+footer hr {
+  border: 1.5px double #707070;
+}
+
+footer p {
+  text-align: center;
+  color: #707070;
+  font-size: 1.2rem;
+  padding: 20px 0;
+}
