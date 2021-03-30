@@ -54,7 +54,7 @@ pycparser==2.19
 PyDispatcher==2.0.5
 pygame==1.9.6
 pyglet==1.4.2
-Pygments==2.4.2
+Pygments==2.7.4
 pygooglechart==0.4.0
 PyHamcrest==1.9.0
 PyJWT==1.7.1
